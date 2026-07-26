@@ -25,12 +25,14 @@ export default function Certifications() {
           transition={{ duration: 0.6 }}
           className="mb-4"
         >
-          <span className="text-xs tracking-[0.2em] uppercase text-purple-400">Certifications</span>
+          <span className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-amber-400">
+            <span className="text-base" role="img" aria-label="certificate">🎓</span> Certifications
+          </span>
         </motion.div>
 
         <BlurText
           text="Certifications"
-          className="text-3xl md:text-5xl font-bold text-white mb-12"
+          className="text-3xl md:text-5xl font-bold text-white mb-12 font-display"
           delay={30}
           animateBy="words"
           direction="top"
@@ -61,12 +63,12 @@ export default function Certifications() {
                 displayOverlayContent={true}
                 overlayContent={
                   <div className="flex flex-col items-center justify-center h-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-                    <p className="text-white text-sm font-medium text-center">{cert.name}</p>
+                    <p className="text-white text-sm font-medium text-center font-display">{cert.name}</p>
                     <a
                       href={cert.badge}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-2 px-3 py-1 text-xs rounded-full bg-purple-500/80 text-white hover:bg-purple-400 transition-colors"
+                      className="mt-2 px-3 py-1 text-xs rounded-full bg-amber-500/80 text-white hover:bg-amber-400 transition-colors"
                     >
                       View Badge →
                     </a>
