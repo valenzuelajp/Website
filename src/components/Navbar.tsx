@@ -27,7 +27,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 backdrop-blur-xl bg-black/50 border-b border-white/5"
     >
-      <button onClick={() => scrollTo("#hero")} className="text-lg font-semibold tracking-tight text-white">
+      <button onClick={() => scrollTo("#hero")} className="text-lg font-display tracking-wide text-amber-400">
         JP
       </button>
       <div className="hidden md:flex items-center gap-1">
@@ -37,7 +37,7 @@ export default function Navbar() {
             variant="ghost"
             size="sm"
             onClick={() => scrollTo(link.href)}
-            className="text-sm text-zinc-400 hover:text-white transition-colors"
+            className="text-sm text-zinc-400 hover:text-amber-300 transition-colors"
           >
             {link.label}
           </Button>

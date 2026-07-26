@@ -59,7 +59,7 @@ const projects = [
   },
 ];
 
-function TimelineCard({ item, index, isProject = false }: { item: typeof experiences[0] | typeof projects[0]; index: number; isProject?: boolean }) {
+function TimelineCard({ item, index }: { item: typeof experiences[0] | typeof projects[0]; index: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -68,13 +68,13 @@ function TimelineCard({ item, index, isProject = false }: { item: typeof experie
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <div className="group relative pl-8 pb-12 border-l border-white/10 last:pb-0">
-        <div className="absolute left-0 top-0 w-3 h-3 -translate-x-1/2 rounded-full bg-purple-500/50 border-2 border-purple-400 group-hover:bg-purple-400 transition-colors" />
-        <div className="bg-white/[0.03] rounded-xl p-6 border border-white/5 hover:border-purple-500/20 transition-all duration-500">
+        <div className="absolute left-0 top-0 w-3 h-3 -translate-x-1/2 rounded-full bg-amber-500/50 border-2 border-amber-400 group-hover:bg-amber-400 transition-colors shadow-[0_0_12px_rgba(212,175,55,0.3)]" />
+        <div className="bg-white/[0.03] rounded-xl p-6 border border-white/5 hover:border-amber-500/20 hover:shadow-[0_0_30px_rgba(212,175,55,0.05)] transition-all duration-500">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
             <div>
-              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+              <h3 className="text-lg font-semibold text-white font-display">{item.title}</h3>
               {"company" in item && (
-                <p className="text-purple-400 text-sm">{item.company}</p>
+                <p className="text-amber-400/80 text-sm">{item.company}</p>
               )}
             </div>
             {"period" in item && (
@@ -90,14 +90,14 @@ function TimelineCard({ item, index, isProject = false }: { item: typeof experie
           <ul className="space-y-2 mb-4">
             {item.bullets.map((bullet, i) => (
               <li key={i} className="text-zinc-400 text-sm flex items-start gap-2">
-                <span className="text-purple-400 mt-1 shrink-0">•</span>
+                <span className="text-amber-400 mt-1 shrink-0">✦</span>
                 {bullet}
               </li>
             ))}
           </ul>
           <div className="flex flex-wrap gap-2">
             {item.tags.map((tag) => (
-              <span key={tag} className="px-2.5 py-1 text-xs rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20">
+              <span key={tag} className="px-2.5 py-1 text-xs rounded-full bg-amber-500/10 text-amber-300/80 border border-amber-500/20">
                 {tag}
               </span>
             ))}
@@ -107,7 +107,7 @@ function TimelineCard({ item, index, isProject = false }: { item: typeof experie
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 mt-4 text-sm text-purple-400 hover:text-purple-300 transition-colors"
+              className="inline-flex items-center gap-1 mt-4 text-sm text-amber-400 hover:text-amber-300 transition-colors"
             >
               Visit site →
             </a>
@@ -131,12 +131,14 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="mb-4"
         >
-          <span className="text-xs tracking-[0.2em] uppercase text-purple-400">Experience</span>
+          <span className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-amber-400">
+            <span className="text-base" role="img" aria-label="scroll">📜</span> Experience
+          </span>
         </motion.div>
 
         <BlurText
           text="Experience & Projects"
-          className="text-3xl md:text-5xl font-bold text-white mb-16"
+          className="text-3xl md:text-5xl font-bold text-white mb-16 font-display"
           delay={30}
           animateBy="words"
           direction="top"
@@ -154,7 +156,7 @@ export default function Experience() {
           <div>
             <h3 className="text-sm uppercase tracking-wider text-zinc-500 mb-8">Projects</h3>
             {projects.map((proj, i) => (
-              <TimelineCard key={i} item={proj} index={i} isProject />
+              <TimelineCard key={i} item={proj} index={i} />
             ))}
           </div>
         </div>

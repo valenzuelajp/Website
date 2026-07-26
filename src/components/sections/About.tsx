@@ -17,12 +17,14 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mb-4"
         >
-          <span className="text-xs tracking-[0.2em] uppercase text-purple-400">About</span>
+          <span className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-amber-400">
+            <span className="text-base" role="img" aria-label="sparkles">✦</span> About
+          </span>
         </motion.div>
 
         <BlurText
           text="About Me"
-          className="text-3xl md:text-5xl font-bold text-white mb-8"
+          className="text-3xl md:text-5xl font-bold text-white mb-8 font-display"
           delay={30}
           animateBy="words"
           direction="top"
@@ -38,14 +40,16 @@ export default function About() {
           </p>
         </ScrollReveal>
 
-        <div className="mt-6">
+        <div className="mt-8">
           <ScrollReveal>
-            <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl">
-              My professional goal is to become a versatile full-stack developer capable of building robust
-              web applications. I aspire to contribute to innovative projects that solve real-world problems
-              and make a positive impact on users&apos; lives. Ultimately, I hope to work alongside talented
-              teams where I can continuously learn, grow, and take on exciting new challenges in the tech industry.
-            </p>
+            <div className="relative p-6 rounded-xl border border-amber-500/10 bg-gradient-to-r from-amber-500/5 to-purple-500/5">
+              <p className="text-zinc-300 text-lg leading-relaxed max-w-3xl">
+                My professional goal is to become a versatile full-stack developer capable of building robust
+                web applications. I aspire to contribute to innovative projects that solve real-world problems
+                and make a positive impact on users&apos; lives. Ultimately, I hope to work alongside talented
+                teams where I can continuously learn, grow, and take on exciting new challenges in the tech industry.
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </div>
