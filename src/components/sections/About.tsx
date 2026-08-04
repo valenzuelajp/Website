@@ -7,8 +7,6 @@ import BlurText from "@/components/BlurText";
 export default function About() {
   return (
     <section id="about" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(231,195,107,0.06),transparent_30%),linear-gradient(180deg,rgba(8,6,4,0.9)_0%,rgba(8,6,4,0.76)_100%)] pointer-events-none" />
-
       <div className="container-cinematic section-padding relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
@@ -40,7 +38,7 @@ export default function About() {
 
         <div className="mt-8">
           <ScrollReveal>
-            <div className="relative p-6 rounded-xl border border-amber-500/10 bg-gradient-to-r from-amber-500/5 to-purple-500/5">
+            <div data-tilt data-tilt-amount="4" className="card-spotlight relative p-6 rounded-xl">
               <p className="text-zinc-300 text-lg leading-relaxed max-w-3xl">
                 My professional goal is to become a versatile full-stack developer capable of building robust
                 web applications. I aspire to contribute to innovative projects that solve real-world problems

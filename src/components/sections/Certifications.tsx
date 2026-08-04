@@ -39,8 +39,6 @@ const certs = [
 export default function Certifications() {
   return (
     <section id="certifications" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(231,195,107,0.08),transparent_28%),linear-gradient(180deg,rgba(8,6,4,0.88)_0%,rgba(8,6,4,0.8)_100%)] pointer-events-none" />
-
       <div className="container-cinematic section-padding relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
@@ -71,8 +69,7 @@ export default function Certifications() {
               transition={{ duration: 0.35, delay: i * 0.06, ease: "easeOut" }}
               className="h-full"
             >
-              <article className="group relative h-full overflow-hidden rounded-2xl border border-white/8 bg-white/[0.03] p-4 shadow-[0_0_30px_rgba(0,0,0,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-amber-500/20 hover:bg-white/[0.05] will-change-transform">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(231,195,107,0.08),transparent_30%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
+              <article data-tilt data-tilt-amount="4" className="card-spotlight group relative h-full overflow-hidden rounded-xl p-4 transition-transform duration-300 will-change-transform">
 
                 <div className="relative overflow-hidden rounded-xl border border-white/6 bg-black/20">
                   <img
@@ -91,6 +88,8 @@ export default function Certifications() {
                     href={cert.badge}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-magnetic
+                    data-magnetic-strength="8"
                     className="inline-flex items-center gap-1 text-sm text-amber-300 transition-colors hover:text-amber-200"
                   >
                     View Badge →

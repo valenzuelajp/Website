@@ -22,13 +22,13 @@ Create a portfolio that feels:
 - spatial and dimensional
 
 ## Current design direction
-The portfolio should explore a 3D spatial feeling. This means the experience should feel layered, dimensional, and alive rather than flat.
+The portfolio explores a cinematic 3D Heads-Up Display (HUD) and technical editorial aesthetic. It uses a real-time WebGL canvas particle grid coupled with a camera-like framing layout.
 
 ## Confirmed preferences
-- Mood: artistic feeling
-- Palette: warmer antique tone
-- Motion style: dramatic
-- Cursor interaction: yes, the background should respond to the cursor
+- Mood: Tech-HUD / Studio Noir
+- Palette: Near-black (#040404) with neon red/magenta or tactical amber accents
+- Motion style: Interactive 3D particle drift, cursor coordinates tracking
+- Typography: Bold, technical sans-serif
 
 ## Website content rule
 - Do not use emoji glyphs in the website UI.

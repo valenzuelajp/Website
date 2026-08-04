@@ -9,7 +9,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-cinzel);
+  --font-display: var(--font-space-grotesk);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -50,6 +50,7 @@
   --animate-float-slower: float-slower 12s ease-in-out infinite;
   --animate-float-slowest: float-slowest 10s ease-in-out infinite;
   --animate-pulse-glow: pulse-glow 4s ease-in-out infinite;
+  --animate-marquee: marquee 35s linear infinite;
 }
 
 @keyframes float-slow {
@@ -73,38 +74,43 @@
   50% { opacity: 0.8; transform: scale(1.5); }
 }
 
+@keyframes marquee {
+  0% { transform: translate3d(80%, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+
 :root {
-  --background: #080604;
+  --background: #040404;
   --foreground: #f8ebd8;
-  --card: #130c08;
+  --card: #090909;
   --card-foreground: #f8ebd8;
-  --popover: #080604;
+  --popover: #040404;
   --popover-foreground: #f8ebd8;
   --primary: #c89b3c;
-  --primary-foreground: #140d05;
-  --secondary: #22160f;
+  --primary-foreground: #090909;
+  --secondary: #0f0f0f;
   --secondary-foreground: #f8ebd8;
-  --muted: #22160f;
-  --muted-foreground: #bba78a;
+  --muted: #0d0d0d;
+  --muted-foreground: #a6947b;
   --accent: #e7c36b;
-  --accent-foreground: #140d05;
+  --accent-foreground: #090909;
   --destructive: #7f1d1d;
-  --border: #4a321b;
-  --input: #4a321b;
+  --border: #1a1a1a;
+  --input: #1a1a1a;
   --ring: #e7c36b;
   --chart-1: #c89b3c;
   --chart-2: #e7c36b;
-  --chart-3: #7a4b2a;
-  --chart-4: #b08b4c;
-  --chart-5: #f2dcc0;
-  --radius: 0.625rem;
-  --sidebar: #130c08;
+  --chart-3: #5c3b24;
+  --chart-4: #a38148;
+  --chart-5: #ebd4ba;
+  --radius: 0.5rem;
+  --sidebar: #090909;
   --sidebar-foreground: #f8ebd8;
   --sidebar-primary: #c89b3c;
-  --sidebar-primary-foreground: #140d05;
-  --sidebar-accent: #22160f;
+  --sidebar-primary-foreground: #090909;
+  --sidebar-accent: #0f0f0f;
   --sidebar-accent-foreground: #f8ebd8;
-  --sidebar-border: #4a321b;
+  --sidebar-border: #1a1a1a;
   --sidebar-ring: #e7c36b;
 }
 
@@ -113,11 +119,9 @@ html {
 }
 
 body {
-  background:
-    radial-gradient(circle at top left, rgba(199, 155, 60, 0.18), transparent 28%),
-    linear-gradient(135deg, #080604 0%, #140d08 45%, #080604 100%);
+  background: #040404;
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -129,11 +133,11 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 24px 24px;
-  mask-image: radial-gradient(circle at center, black 20%, transparent 85%);
-  opacity: 0.35;
+    linear-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+  opacity: 0.22;
 }
 
 @layer base {
@@ -177,4 +181,37 @@ body::before {
   .section-padding {
     padding: 8rem 2rem;
   }
+}
+
+/* GPU-Accelerated Dynamic Card Spotlight Border Utility */
+.card-spotlight {
+  position: relative;
+  background: rgba(9, 9, 9, 0.5) !important;
+  border: 1px solid rgba(200, 155, 60, 0.08) !important;
+  transition: border-color 0.4s ease, background-color 0.4s ease;
+  backdrop-filter: blur(8px);
+}
+
+.card-spotlight::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    250px circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    rgba(200, 155, 60, 0.22) 0%,
+    transparent 65%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+.card-spotlight:hover::before {
+  opacity: 1;
 }

@@ -68,8 +68,8 @@ function TimelineCard({ item, index }: { item: typeof experiences[0] | typeof pr
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <div className="group relative pl-8 pb-12 border-l border-white/10 last:pb-0">
-        <div className="absolute left-0 top-0 w-3 h-3 -translate-x-1/2 rounded-full bg-amber-500/50 border-2 border-amber-400 group-hover:bg-amber-400 transition-colors shadow-[0_0_12px_rgba(212,175,55,0.3)]" />
-        <div className="bg-white/[0.03] rounded-xl p-6 border border-white/5 hover:border-amber-500/20 hover:shadow-[0_0_30px_rgba(212,175,55,0.05)] transition-all duration-500">
+        <div className="absolute left-0 top-0 w-3 h-3 -translate-x-1/2 rounded-full bg-amber-500/50 border-2 border-amber-400 group-hover:bg-amber-400 transition-colors" />
+        <div data-tilt data-tilt-amount="4" className="card-spotlight rounded-xl p-6 transition-all duration-500">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
             <div>
               <h3 className="text-lg font-semibold text-white font-display">{item.title}</h3>
@@ -107,6 +107,8 @@ function TimelineCard({ item, index }: { item: typeof experiences[0] | typeof pr
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
+              data-magnetic
+              data-magnetic-strength="8"
               className="inline-flex items-center gap-1 mt-4 text-sm text-amber-400 hover:text-amber-300 transition-colors"
             >
               Visit site →
@@ -121,8 +123,6 @@ function TimelineCard({ item, index }: { item: typeof experiences[0] | typeof pr
 export default function Experience() {
   return (
     <section id="experience" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(231,195,107,0.06),transparent_30%),linear-gradient(180deg,rgba(8,6,4,0.9)_0%,rgba(8,6,4,0.76)_100%)] pointer-events-none" />
-
       <div className="container-cinematic section-padding relative z-10">
         <motion.div
           initial={{ opacity: 0 }}

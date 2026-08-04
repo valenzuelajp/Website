@@ -16,6 +16,27 @@ Track every change to this wiki and project. Newest entries go at the **top**.
 
 ---
 
+## 2026-08-04 — Cyberpunk Tech-HUD Implementation Complete
+- **What:** Replaced the Renaissance visual system with a full Cyberpunk Tech-HUD aesthetic across the entire portfolio.
+- **Changes:**
+  - Deleted `RenaissanceBackground.tsx`, removed Cinzel font, replaced with `Space Grotesk` display font.
+  - Created `HUDParticles.tsx` — a React Three Fiber WebGL canvas with 1,500 amber gold particles that orbit and react to cursor movement and Lenis scroll offset.
+  - Refactored `FloatingElements.tsx` into a fixed viewport HUD overlay with: live timecode ticker, cursor coordinate telemetry, viewport corner brackets, scrolling marquee footer, and dynamic cursor light bloom.
+  - Added `card-spotlight` CSS utility to `globals.css` — a radial gradient border that lights up around the cursor position on hover using `--pointer-x`/`--pointer-y` CSS custom properties.
+  - Updated background to solid `#040404`, switched grid overlay to finer 32px spacing.
+  - Applied `card-spotlight` across all 7 sections: Hero, About, Experience, Projects, TechStack, Certifications, Contact.
+  - Removed all antique warm radial gradient section overlays.
+- **Build:** `npm run build` — compiled successfully with zero TypeScript errors.
+
+---
+
+## 2026-08-04 — Pivoted to Cyberpunk Tech-HUD Aesthetic
+- **What:** Removed the Renaissance painting theme, classical background, and Cinzel font. Planned a real-time WebGL 3D particle background and custom tech-HUD viewport overlay.
+- **Why:** Refined style preference to align with high-end digital design patterns like *Active Theory* and *Streets of Punk*.
+- **Result:** Refactored design pipeline and wiki documents to prepare for the Tech-HUD implementation.
+
+---
+
 ## 2026-08-04 — UI Cleanup, Motion Smoothing, and Certification Fixes
 - **What:** Removed emoji glyphs from the website UI, made the hero location more visible, softened the section transitions, reduced the heavier scroll-reveal effects, and replaced the certification cards with cleaner text-first layouts.
 - **Why:** The site needed cleaner presentation, smoother scrolling, better performance, and clearer certification imagery/content.

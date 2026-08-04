@@ -10,7 +10,7 @@ aliases:
 
 # Design Inspiration Reference
 
-Reference site: Shopify Editions Winter 2026
+Reference sites: Active Theory (activetheory.net), Streets of Punk (dappasol.com/streetsofpunk)
 
 ## Purpose of this note
 This note is meant to be a detailed implementation guide for anyone working on the portfolio, including AI tools and future collaborators. It documents the techniques used by the reference site and translates them into practical ideas for a cinematic personal portfolio.
@@ -190,28 +190,24 @@ Animation should feel coherent and intentional across all sections.
 
 ## 7. Implementation checklist for this portfolio
 
- - [x] Use a real Renaissance painting as the hero background
+ - [ ] Deploy dynamic 3D WebGL HUDParticles background
+ - [ ] Overlay camera timecode and system status indicator HUD
 
-## 7.1 Selected artwork direction
+## 7.1 Selected design direction
 
 Chosen background reference:
- - Raphael, The School of Athens
+ - Active Theory real-time interactive particle grids.
+ - Streets of Punk tactical viewport overlay.
 
 Why this works:
- - It has a strong architectural sense of depth.
- - The perspective already feels spatial and immersive.
- - It is clearly Renaissance-era and visually classical.
- - The composition supports a dramatic hero treatment.
+ - High-end tech feel that highlights full-stack and IoT development.
+ - Immersive real-time WebGL is more premium than static images.
+ - Sharp contrast between bold technical headings and monospace HUD overlays.
 
 Interactive treatment:
- - The image should drift subtly with the cursor.
- - Light should bloom toward the pointer to create a living atmosphere.
- - The painting should feel like it is hanging in a gallery, not flattened into wallpaper.
-
-Implementation note:
- - Keep the brushwork visible.
- - Use warm grading and overlays instead of heavy filters.
- - Preserve the feeling of the artwork while making it responsive.
+ - 3D particle cloud rotates/drifts based on mouse pointer coordinates.
+ - Hover borders and text highlights light up dynamically with custom pointer custom CSS variables.
+ - Particle density, speed, and grid rotation shift dynamically with scroll.
 ---
 
 ## 8. Recommended next steps

@@ -16,29 +16,27 @@ Use this note to keep the current status of the website visible and easy to upda
 - Keep the wiki updated whenever the site changes.
 
 ## Confirmed Direction
-- Artistic mood
-- Warmer antique palette
-- Dramatic motion
-- Cursor-reactive background interaction
-- Renaissance painting background based on Raphael's The School of Athens
+- Cinematic Tech-HUD theme / Cyberpunk Studio Noir aesthetic
+- Dark charcoal/black color palette (`#040404`) with neon-red or tactical amber accents
+- Real-time 3D interactive particle grid reacting to cursor
+- Custom viewport overlay with HUD parameters, crosshairs, timecodes, and status labels
+- Bold, technical sans-serif typography
+- No Renaissance painting or Cinzel serif font
 - No emoji glyphs in the website UI
 
 ## In Progress
-- [x] Review the current website structure and identify improvement areas.
-- [x] Add a featured projects section to the landing page.
-- [x] Improve the visual storytelling with stronger section transitions and content hierarchy.
-- [x] Polish the hero and section copy to feel more cinematic and intentional.
-- [x] Replace the hero background with an interactive Renaissance painting.
-- [x] Add more premium motion moments and responsive refinements.
-- [x] Remove emoji glyphs from the website UI.
-- [x] Fix certification card presentation and image framing.
+- [x] Delete RenaissanceBackground.tsx and remove Cinzel font imports
+- [x] Create 3D HUDParticles.tsx using React Three Fiber
+- [x] Refactor FloatingElements.tsx into a technical HUD overlay
+- [x] Update globals.css with Cyberpunk palette and spotlight card borders
+- [x] Apply card-spotlight layout across all 7 sections
+- [x] Build passed — zero TypeScript errors
 
 ## Next Up
-1. Refine the hero message and intro copy.
-2. Add a stronger projects/story section with clearer narrative.
-3. Improve spacing, typography, and section rhythm.
-4. Add motion polish and reduced-motion support.
-5. Prepare final deployment polish.
+1. Start dev server and do a visual review of the new design.
+2. Fine-tune particle density, color, and speed.
+3. Add motion polish and reduced-motion support.
+4. First git commit and deploy to Vercel.
 
 ## Notes
 - Anyone who reads or edits this wiki should update this note after making a change.

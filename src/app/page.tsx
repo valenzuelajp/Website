@@ -4,6 +4,7 @@ import { useLenis } from "lenis/react";
 import Navbar from "@/components/Navbar";
 import FloatingElements from "@/components/FloatingElements";
 import ScrollAnimations from "@/components/ScrollAnimations";
+import SiteInteractions from "@/components/SiteInteractions";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Experience from "@/components/sections/Experience";
@@ -18,6 +19,7 @@ export default function Home() {
   return (
     <>
       <ScrollAnimations lenis={lenis ?? null} />
+      <SiteInteractions />
       <FloatingElements />
       <Navbar />
       <Hero />

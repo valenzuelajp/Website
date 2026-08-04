@@ -42,7 +42,7 @@ A cinematic personal portfolio website — heavily animated, scroll-driven, and 
 | **Smooth scroll** | Lenis | 4KB, works with all engines, inertia scroll feel |
 | **UI foundation** | shadcn/ui | Free, Tailwind-native, copy-paste model |
 | **Prebuilt components** | React Bits + Aceternity UI (30 free) | Text reveals, bento grids, spotlight hero |
-| **Design** | Figma (free tier) | Native timeline, MCP export support |
+| **Visual Style** | Cyberpunk Tech-HUD / Studio Noir | Technical terminal, 3D WebGL background, high-contrast typography |
 | **AI in editor** | Continue.dev + GitHub Copilot free tier | Both free, no API costs |
 | **AI agent** | OpenCode CLI (DeepSeek V4 Flash Free) | Built-in, no-cost |
 | **Hosting** | Vercel (Hobby) | Free, auto-deploy from GitHub |
@@ -60,6 +60,7 @@ See [[Full-Stack-Recommendations]] and [[Free-Vibe-Coding-Stack]] for details.
 - [x] Document the wiki maintenance rule
 - [x] Add a dedicated progress tracker note
 - [x] Build the initial cinematic portfolio scaffold
+- [x] Pivot visual direction away from Renaissance to Cyberpunk Tech-HUD
 - [ ] Refine the site narrative and content hierarchy
 - [ ] Add stronger cinematic motion moments
 - [ ] Prepare deployment and polish
@@ -76,12 +77,11 @@ See [[Full-Stack-Recommendations]] and [[Free-Vibe-Coding-Stack]] for details.
 - [x] Set up Lenis smooth scroll provider
 - [x] Wire up Motion.dev scroll reveals
 - [x] Wire up GSAP ScrollTrigger + Lenis sync
-- [x] Build Hero section (full-screen, dark cinematic, scroll reveal, profile photo)
-- [x] Build About section (Bio with scroll reveals)
-- [x] Build Experience section (Timeline cards with scroll reveals)
-- [x] Build Tech Stack section (Icon grid with staggered reveals)
-- [x] Build Certifications section (TiltedCard with overlay)
-- [x] Build Contact section (Social links + GitHub chart)
+- [x] Build initial Hero section, About, Experience, Tech, Certifications, Contact
+- [/] Delete RenaissanceBackground.tsx and remove Cinzel font imports (In Progress)
+- [ ] Build 3D WebGL HUDParticles.tsx background (In Progress)
+- [ ] Refactor FloatingElements.tsx to a technical HUD overlay (In Progress)
+- [ ] Update globals.css with Cyberpunk palette and spotlight card borders (In Progress)
 - [ ] Create AGENTS.md
 - [ ] First git commit + deploy to Vercel
 

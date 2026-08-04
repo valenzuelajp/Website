@@ -26,8 +26,6 @@ const featuredProjects = [
 export default function Projects() {
   return (
     <section id="projects" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(231,195,107,0.06),transparent_30%),linear-gradient(180deg,rgba(8,6,4,0.9)_0%,rgba(8,6,4,0.76)_100%)] pointer-events-none" />
-
       <div className="container-cinematic section-padding relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
@@ -56,20 +54,23 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-7 shadow-[0_0_30px_rgba(0,0,0,0.2)] transition-all duration-500 hover:border-amber-500/20 hover:bg-white/[0.06]"
+              data-tilt
+              data-tilt-amount="4"
+              className="card-spotlight group relative overflow-hidden rounded-xl p-7 transition-all duration-500"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-purple-500/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <div className="relative z-10">
-                <div className="flex items-center justify-between gap-4 mb-3">
+                <div className="flex items-center justify-between gap-4 mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-white font-display">{project.title}</h3>
-                    <p className="text-sm text-amber-400/80">{project.subtitle}</p>
+                    <h3 className="text-lg font-bold text-white uppercase tracking-wider font-display">{project.title}</h3>
+                    <p className="text-xs text-amber-500/80 uppercase tracking-widest font-mono">{project.subtitle}</p>
                   </div>
                   {project.link && (
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-magnetic
+                      data-magnetic-strength="8"
                       className="text-sm text-zinc-400 transition-colors hover:text-amber-300"
                     >
                       Visit ↗

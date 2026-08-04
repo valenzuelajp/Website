@@ -26,10 +26,12 @@ function TechCard({ tech, index }: { tech: typeof techs[0]; index: number }) {
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="flex flex-col items-center gap-3 p-6 rounded-xl bg-white/[0.03] border border-white/5 hover:border-amber-500/20 hover:bg-white/[0.06] hover:shadow-[0_0_30px_rgba(212,175,55,0.05)] transition-all duration-300 group"
+      data-tilt
+      data-tilt-amount="5"
+      className="card-spotlight flex flex-col items-center gap-3 p-6 rounded-xl group transition-all duration-300"
     >
       <img src={tech.icon} alt={tech.name} className="w-10 h-10 md:w-12 md:h-12 group-hover:scale-110 transition-transform duration-300" />
-      <span className="text-sm text-zinc-400 group-hover:text-amber-300 transition-colors">{tech.name}</span>
+      <span className="text-xs text-zinc-500 group-hover:text-amber-400 transition-colors font-mono uppercase tracking-widest">{tech.name}</span>
     </motion.div>
   );
 }
@@ -37,8 +39,6 @@ function TechCard({ tech, index }: { tech: typeof techs[0]; index: number }) {
 export default function TechStack() {
   return (
     <section id="tech-stack" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(231,195,107,0.06),transparent_30%),linear-gradient(180deg,rgba(8,6,4,0.9)_0%,rgba(8,6,4,0.76)_100%)] pointer-events-none" />
-
       <div className="container-cinematic section-padding relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
