@@ -105,8 +105,14 @@ This wiki documents all research for building a **cinematic personal portfolio w
 ## Status
 
 - [x] Research phase complete
-- [ ] Stack decision
-- [ ] Project scaffold
+- [x] Stack decision
+- [x] Project scaffold
 - [ ] Design in Figma Motion
 - [ ] Implementation
 - [ ] Deployment
+
+## Live Progress
+
+- See [[Progress-Tracker]] for the current task board and daily updates.
+- See [[Changelog]] for completed milestones.
+- Follow [[DOCUMENTATION-RULE]] for the required wiki-update workflow.

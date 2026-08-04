@@ -36,8 +36,8 @@ function TechCard({ tech, index }: { tech: typeof techs[0]; index: number }) {
 
 export default function TechStack() {
   return (
-    <section id="tech-stack" className="relative py-32">
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/5 to-black pointer-events-none" />
+    <section id="tech-stack" className="relative py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(231,195,107,0.06),transparent_30%),linear-gradient(180deg,rgba(8,6,4,0.9)_0%,rgba(8,6,4,0.76)_100%)] pointer-events-none" />
 
       <div className="container-cinematic section-padding relative z-10">
         <motion.div
@@ -47,9 +47,7 @@ export default function TechStack() {
           transition={{ duration: 0.6 }}
           className="mb-4"
         >
-          <span className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-amber-400">
-            <span className="text-base" role="img" aria-label="tools">⚒️</span> Tech Stack
-          </span>
+          <span className="inline-flex items-center text-xs tracking-[0.2em] uppercase text-amber-400">Tech Stack</span>
         </motion.div>
 
         <BlurText

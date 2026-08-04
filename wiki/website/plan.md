@@ -56,6 +56,14 @@ See [[Full-Stack-Recommendations]] and [[Free-Vibe-Coding-Stack]] for details.
 
 ## Implementation Phases
 
+### Progress Tracker
+- [x] Document the wiki maintenance rule
+- [x] Add a dedicated progress tracker note
+- [x] Build the initial cinematic portfolio scaffold
+- [ ] Refine the site narrative and content hierarchy
+- [ ] Add stronger cinematic motion moments
+- [ ] Prepare deployment and polish
+
 ### Phase 1: Foundation
 - [x] Create wiki vault (25+ notes across 9 categories)
 - [x] Research all animation engines, UI libraries, design pipelines
@@ -87,7 +95,7 @@ See [[Full-Stack-Recommendations]] and [[Free-Vibe-Coding-Stack]] for details.
 ### Phase 3: Build
 - [ ] Hero section (full-screen, Vanta background or Rive interactive)
 - [ ] About section (scroll reveals, text animations)
-- [ ] Work / Projects section (horizontal scroll or pinned scrollytelling)
+- [ ] Featured Projects section (card-based showcase with stack, outcomes, and links)
 - [ ] Skills section (animated cards, progress bars)
 - [ ] Contact section (form + animated background)
 

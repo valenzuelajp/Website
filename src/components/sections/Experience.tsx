@@ -90,7 +90,7 @@ function TimelineCard({ item, index }: { item: typeof experiences[0] | typeof pr
           <ul className="space-y-2 mb-4">
             {item.bullets.map((bullet, i) => (
               <li key={i} className="text-zinc-400 text-sm flex items-start gap-2">
-                <span className="text-amber-400 mt-1 shrink-0">✦</span>
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
                 {bullet}
               </li>
             ))}
@@ -120,8 +120,8 @@ function TimelineCard({ item, index }: { item: typeof experiences[0] | typeof pr
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative py-32">
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/5 to-black pointer-events-none" />
+    <section id="experience" className="relative py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(231,195,107,0.06),transparent_30%),linear-gradient(180deg,rgba(8,6,4,0.9)_0%,rgba(8,6,4,0.76)_100%)] pointer-events-none" />
 
       <div className="container-cinematic section-padding relative z-10">
         <motion.div
@@ -131,9 +131,7 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="mb-4"
         >
-          <span className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-amber-400">
-            <span className="text-base" role="img" aria-label="scroll">📜</span> Experience
-          </span>
+          <span className="inline-flex items-center text-xs tracking-[0.2em] uppercase text-amber-400">Experience</span>
         </motion.div>
 
         <BlurText

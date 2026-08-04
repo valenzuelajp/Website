@@ -1,21 +1,45 @@
 "use client";
 
 import { motion } from "motion/react";
-import TiltedCard from "@/components/TiltedCard";
 import BlurText from "@/components/BlurText";
 
 const certs = [
-  { name: "Python Essentials 1", image: "/phyton.png", badge: "https://www.credly.com/" },
-  { name: "Cybersecurity Essentials", image: "/esssential.png", badge: "https://www.credly.com/" },
-  { name: "Introduction to Cybersecurity", image: "/intro-cyber.png", badge: "https://www.credly.com/" },
-  { name: "IT Specialist - HTML and CSS", image: "/html-css.png", badge: "https://www.credly.com/" },
-  { name: "Operating Systems Basics", image: "/osb.png", badge: "https://www.credly.com/" },
+  {
+    name: "Python Essentials 1",
+    issuer: "Cisco Networking Academy",
+    image: "/phyton.png",
+    badge: "https://www.credly.com/",
+  },
+  {
+    name: "Cybersecurity Essentials",
+    issuer: "Cisco Networking Academy",
+    image: "/esssential.png",
+    badge: "https://www.credly.com/",
+  },
+  {
+    name: "Introduction to Cybersecurity",
+    issuer: "Cisco Networking Academy",
+    image: "/intro-cyber.png",
+    badge: "https://www.credly.com/",
+  },
+  {
+    name: "IT Specialist - HTML and CSS",
+    issuer: "Pearson",
+    image: "/html-css.png",
+    badge: "https://www.credly.com/",
+  },
+  {
+    name: "Operating Systems Basics",
+    issuer: "Cisco Networking Academy",
+    image: "/osb.png",
+    badge: "https://www.credly.com/",
+  },
 ];
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="relative py-32">
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/5 to-black pointer-events-none" />
+    <section id="certifications" className="relative py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(231,195,107,0.08),transparent_28%),linear-gradient(180deg,rgba(8,6,4,0.88)_0%,rgba(8,6,4,0.8)_100%)] pointer-events-none" />
 
       <div className="container-cinematic section-padding relative z-10">
         <motion.div
@@ -25,9 +49,7 @@ export default function Certifications() {
           transition={{ duration: 0.6 }}
           className="mb-4"
         >
-          <span className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-amber-400">
-            <span className="text-base" role="img" aria-label="certificate">🎓</span> Certifications
-          </span>
+          <span className="inline-flex items-center text-xs tracking-[0.2em] uppercase text-amber-400">Certifications</span>
         </motion.div>
 
         <BlurText
@@ -46,35 +68,35 @@ export default function Certifications() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.35, delay: i * 0.06, ease: "easeOut" }}
+              className="h-full"
             >
-              <TiltedCard
-                imageSrc={cert.image}
-                altText={cert.name}
-                captionText={cert.name}
-                containerHeight="300px"
-                containerWidth="100%"
-                imageHeight="300px"
-                imageWidth="400px"
-                rotateAmplitude={12}
-                scaleOnHover={1.02}
-                showMobileWarning={false}
-                showTooltip={true}
-                displayOverlayContent={true}
-                overlayContent={
-                  <div className="flex flex-col items-center justify-center h-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-                    <p className="text-white text-sm font-medium text-center font-display">{cert.name}</p>
-                    <a
-                      href={cert.badge}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-2 px-3 py-1 text-xs rounded-full bg-amber-500/80 text-white hover:bg-amber-400 transition-colors"
-                    >
-                      View Badge →
-                    </a>
-                  </div>
-                }
-              />
+              <article className="group relative h-full overflow-hidden rounded-2xl border border-white/8 bg-white/[0.03] p-4 shadow-[0_0_30px_rgba(0,0,0,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:border-amber-500/20 hover:bg-white/[0.05] will-change-transform">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(231,195,107,0.08),transparent_30%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
+
+                <div className="relative overflow-hidden rounded-xl border border-white/6 bg-black/20">
+                  <img
+                    src={cert.image}
+                    alt={cert.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-[300px] w-full object-contain bg-white p-2 transition-transform duration-300 group-hover:scale-[1.015]"
+                  />
+                </div>
+
+                <div className="relative mt-4 space-y-1">
+                  <p className="text-xs tracking-[0.24em] uppercase text-amber-400/70">{cert.issuer}</p>
+                  <h3 className="text-base font-semibold text-white font-display">{cert.name}</h3>
+                  <a
+                    href={cert.badge}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-amber-300 transition-colors hover:text-amber-200"
+                  >
+                    View Badge →
+                  </a>
+                </div>
+              </article>
             </motion.div>
           ))}
         </div>

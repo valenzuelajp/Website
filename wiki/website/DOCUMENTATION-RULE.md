@@ -32,6 +32,17 @@ This wiki is the single source of truth for all research, decisions, and impleme
 4. Link to related notes using `[[double brackets]]`
 5. Add appropriate `#tags`
 
+### Wiki Maintenance Rule
+1. Anyone who can see or read this wiki must update it after making or reviewing a change.
+2. Every update should include:
+   - What changed
+   - What was learned
+   - Any blockers or risks
+   - The next task to do
+3. Keep the wiki current even if the website change is small.
+4. If a change is made to the site, the corresponding wiki note should be updated before the next implementation step.
+5. Use [[Changelog]] for historical changes and [[Progress-Tracker]] for live progress.
+
 ### Phase 2: Decide
 1. Open relevant comparison notes
 2. Document the decision rationale in [[Changelog]]

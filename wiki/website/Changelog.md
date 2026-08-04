@@ -16,6 +16,28 @@ Track every change to this wiki and project. Newest entries go at the **top**.
 
 ---
 
+## 2026-08-04 — UI Cleanup, Motion Smoothing, and Certification Fixes
+- **What:** Removed emoji glyphs from the website UI, made the hero location more visible, softened the section transitions, reduced the heavier scroll-reveal effects, and replaced the certification cards with cleaner text-first layouts.
+- **Why:** The site needed cleaner presentation, smoother scrolling, better performance, and clearer certification imagery/content.
+- **Result:** The portfolio now reads more consistently, scrolls more seamlessly, and the certification section uses the correct badge images with better framing and metadata.
+
+---
+
+## 2026-08-04 — Renaissance Painting Background Implemented
+- **What:** Replaced the hero background with an interactive Renaissance painting treatment based on Raphael's The School of Athens.
+- **Why:** The user wanted a real painting from that era with a stronger 3D spatial feeling and cursor interaction.
+- **Result:** The hero now uses a classical fresco image with cursor-reactive lighting and layered atmospheric overlays.
+
+---
+
+## 2026-08-04 — Planned: Featured Projects Showcase
+- **What:** Add a dedicated featured projects section to the portfolio to complement the existing experience timeline.
+- **Why:** The current site highlights experience and milestones, but the wiki roadmap calls for a more explicit project showcase with stack, outcomes, and external links.
+- **Scope:** Introduce a new section between Experience and Tech Stack, using the existing cinematic card design language.
+- **Status:** Planned for implementation.
+
+---
+
 ## 2026-07-26 — Cinematic Portfolio Built — Phase 1 Complete
 - **What:** Built full cinematic single-page portfolio with Next.js 16 + Lenis + Motion.dev + GSAP + React Bits
 - **Sections:** Hero (profile photo, name, social links), About, Experience (timeline with tabs), Tech Stack, Certifications (tilt cards), Contact (GitHub chart)
